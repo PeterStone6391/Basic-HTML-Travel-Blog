@@ -5,11 +5,6 @@
   --light-gray: lightgray;
 }
 
-#next {
-  --first-color: tomato;
-  --second-color: deepskyblue;
-  --light-gray: lightgray;
-}
 html,
 body {
   padding: 0;
@@ -23,8 +18,8 @@ h3,
 h4,
 h5,
 h6 {
-  margin-bottom: 0;
-  padding-bottom: 0;
+  margin-bottom: 0.2em;
+  padding-bottom: 0.2em;
   color: var(--first-color);
 }
 p {
@@ -170,6 +165,9 @@ figure.hero figcaption * {
   font-weight: bold;
   font-size: 1.4em;
   text-transform: uppercase;
+  color: white;
+  margin: 0;
+  padding: 0;
 }
 #offcanvas-left ul,
 #offcanvas-right ul {
@@ -202,7 +200,8 @@ footer {
   background-color: var(--second-color);
   flex: 0 0 80px;
   flex-direction: row;
-  /* padding: 40px 0px; */
+  padding: 40px 0px;
+  /* min-height: 80px; */
 }
 footer section:first-child {
   grid-column: 2;
@@ -257,6 +256,9 @@ form textarea {
   resize: vertical;
 }
 
+main {
+  min-height: 500px;
+}
 article {
   display: grid;
   grid-template-columns: 10% 1fr 10%;
@@ -291,6 +293,35 @@ article > blockquote {
   padding-left: 10px;
   margin-left: -20px;
 }
+
+/* Table styles */
+
+table.styled {
+  width: 100%;
+  border-collapse: collapse;
+}
+table.styled thead,
+table.styled th {
+  background-color: #dfdfdf;
+}
+table.styled thead,
+table.styled th {
+  text-align: center;
+}
+table.styled th,
+table.styled td {
+  border: 1px solid lightgray;
+  padding: 5px;
+}
+footer table.styled th {
+  background: none;
+  text-align: left;
+}
+footer table.styled th,
+footer table.styled td {
+  border: 0;
+}
+
 p mark {
   background-color: var(--first-color);
   padding: 0 5px;
@@ -329,7 +360,6 @@ pre {
 pre > code {
   padding: 0;
 }
-
 .responsive-vid {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
